@@ -1,0 +1,9 @@
+variable "org_service_url" {
+  type        = string
+  description = "Azure DevOps organization URL"
+}
+
+variable "pat" {
+  type      = string
+  sensitive = true
+}
