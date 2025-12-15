@@ -1,0 +1,11 @@
+provider "azuredevops" {
+  org_service_url       = var.org_service_url
+  personal_access_token = var.pat
+}
+
+resource "azuredevops_project" "dev" {
+  name               = "dev-project"
+  visibility         = "private"
+  version_control    = "Git"
+  work_item_template = "Agile"
+}
